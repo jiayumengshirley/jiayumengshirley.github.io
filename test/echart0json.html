@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script src="echarts-master/dist/echarts.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <p>Following is one chart:</p>
+    <div id="main" style="width:300px;height:300px"></div>
+    <script>
+        /*var myChart = echarts.init(document.getElementById('main'));
+                                        $.getJSON('test-json.json', function(option) {
+                                                    console.log(option);
+                                                    var myChart1 = echarts.init(document.getElementById('main1'));
+                                                    myChart.setOption(option);*/
+        var myChart = echarts.init(document.getElementById('main'));
+
+        var option = {};
+        $.getJSON('test-json.json', function(option) {
+            myChart.setOption(option);
+        });
+    </script>
+</body>
+
+</html>
